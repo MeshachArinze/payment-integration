@@ -1,32 +1,32 @@
-import React from 'react'
-import { Link } from "react-router-dom";
-import { FaTimes } from 'react-icons/fa'
-import { useGlobalContext } from '../../context'
-import sublinks from '../../Data'
-
+import React from "react";
+import { FaTimes } from "react-icons/fa";
+import { useGlobalContext } from "../../context";
+import sublinks from "../../data";
+import "./Sidebar.css";
 
 const Sidebar = () => {
   const { isSidebarOpen, closeSidebar } = useGlobalContext();
   return (
     <div
       className={`${
-        isSidebarOpen ? 'sidebar-wrapper show' : 'sidebar-wrapper'
+        isSidebarOpen ? "sidebar-wrapper show" : "sidebar-wrapper"
       }`}
     >
-      <aside className='sidebar bg-navyBlue'>
-        <button className='close-btn' onClick={closeSidebar}>
-          <FaTimes className='text-lightOrange' size={20} />
+      <aside className="sidebar">
+        <button className="close-btn" onClick={closeSidebar}>
+          <FaTimes />
         </button>
-        <div className='sidebar-links'>
-          {Object.assign(sublinks.map((item, index) => {
+        <div className="sidebar-links ">
+          {sublinks.map((item, index) => {
             const { links, page } = item;
             return (
               <article key={index}>
-                <div className="sidebar-sublinks text-lightOrange">
+                <h4>{page}</h4>
+                <div className="sidebar-sublinks">
                   {links.map((link, index) => {
-                    const { url, label } = link;
+                    const { url, icon, label } = link;
                     return (
-                      <a className="text-lightOrange text-md" key={index} href={url}>
+                      <a className="text-lightBlack" key={index} href={url}>
                         {label}
                       </a>
                     );
@@ -34,11 +34,11 @@ const Sidebar = () => {
                 </div>
               </article>
             );
-          }))}
+          })}
         </div>
       </aside>
     </div>
-  )
-}
+  );
+};
 
-export default Sidebar
+export default Sidebar;

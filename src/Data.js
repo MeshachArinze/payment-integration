@@ -1,74 +1,121 @@
-import Bootstrap from "./icons/bootstrap.jpg";
+import bootstrap from "./icons/bootstrap.jpg";
+import css3 from "./icons/css3-logo.jpg";
 import writing from "./icons/external-writing.jpg";
 import figma from "./icons/figma--v1.jpg";
-import html from "./icons/html-5--v1.jpg";
+import html5 from "./icons/html-5--v1.jpg";
 import javascript from "./icons/javascript--v1.jpg";
 import nodejs from "./icons/nodejs.jpg";
 import php from "./icons/php.jpg";
-import wordpress from "./icons/wordpress.jpg";
-import native from "./icons/react-native.jpg";
+import wordpres from "./icons/wordpress.jpg";
 
 const sublinks = [
   {
     page: "Home",
-    links: [{ label: "Home", url: "/" }],
+    links: [
+      { label: "Home",  url: "/" },
+      
+    ],
+  },
+  
+  {
+    page: "what we do",
+    links: [
+      { label: "company",  url: "/company" },
+      { label: "payment",  url: "/payment" },
+      { label: "pricing",  url: "/pricing" },
+    ],
   },
   {
-    page: "About",
-    links: [{ label: "about", url: "/about" }],
+    page: "who we are",
+    links: [
+      { label: "about",  url: "/about" },
+      {label: "service", url: "/service"}
+    ],
   },
   {
-    page: "Service",
-    links: [{ label: "service", url: "/service" }],
-  },
-  {
-    page: "Contact",
-    links: [{ label: "contact", url: "/contact" }],
+    page: "contact",
+    links: [
+      { label: "contact",  url: "/contact" },
+      { label: "sign up",  url: "/signup" },
+      { label: "sign in",  url: "/signin" },
+    ],
   },
 ];
 
 export const icons = [
   {
     id: 1,
-    text: Bootstrap,
-    title: "Ui Design",
+    pics: bootstrap,
+    text: 'ui design'
   },
   {
     id: 2,
-    text: writing,
-    title: "content writng",
+    pics: css3,
+    text: 'layout'
   },
   {
     id: 3,
-    text: figma,
-    title: "UI/UX",
+    pics: writing,
+    text: 'content writing'
   },
   {
     id: 4,
-    text: html,
-    title: "Markup language",
+    pics: figma,
+    text: 'ui / ux'
   },
   {
     id: 5,
-    text: javascript,
-    title: "Front end ",
+    pics: html5,
+    text: 'markup language'
   },
   {
     id: 6,
-    text: nodejs,
-    title: "Backend",
+    pics: javascript,
+    text: 'client side'
   },
   {
     id: 7,
-    text: native,
-    title: "Mobile App",
+    pics: nodejs,
+    text: 'javascript framework for backend'
   },
   {
     id: 8,
-    text: wordpress,
-    title: "Content Management System",
+    pics: wordpres,
+    text: 'content management system'
   },
-  { id: 9, text: php, title: "Backend" },
+]
+
+export const service = [
+  {
+    id: 1,
+    title: "Payment integration",
+    text: "online or offline business payment! We have a solution for all your payment requirement Provide your customers with the best payment",
+  },
+  {
+    id: 2,
+    title: "content marketing",
+    text: "online or offline business payment! We have a solution for all your payment requirement Provide your customers with the best payment",
+  },
+  {
+    id: 3,
+    title: "Graphic design",
+    text: "online or offline business payment! We have a solution for all your payment requirement Provide your customers with the best payment",
+  },
+  {
+    id: 4,
+    title: "web development",
+    text: "online or offline business payment! We have a solution for all your payment requirement Provide your customers with the best payment",
+  },
+  {
+    id: 5,
+    title: "content management system",
+    text: "online or offline business payment! We have a solution for all your payment requirement Provide your customers with the best payment",
+  },
+  {
+    id: 6,
+    title: "content writing",
+    text: "online or offline business payment! We have a solution for all your payment requirement Provide your customers with the best payment",
+  },
 ];
 
 export default sublinks;

@@ -1,7 +1,8 @@
 import React from "react";
-import { FaBars, FaStripe } from "react-icons/fa";
-import {useGlobalContext} from "../../context";
-import "./Navbar.css"
+import logo from "../../images/logo.svg";
+import { FaBars } from "react-icons/fa";
+import { useGlobalContext } from "../../context";
+import "./Navbar.css";
 
 const Navbar = () => {
   const { openSidebar, openSubmenu, closeSubmenu } = useGlobalContext();
@@ -18,43 +19,37 @@ const Navbar = () => {
     }
   };
   return (
-    <nav className="bg-lightPurple nav" onMouseOver={handleSubmenu}>
-      <div className="bg-lightPurple nav-center">
+    <nav className="nav" onMouseOver={handleSubmenu}>
+      <div className="nav-center  bg-lightPurple">
         <div className="nav-header">
-          <div>{<FaStripe className="text-lightOrange" size={50} />}</div>
-
+          <img src={logo} className="nav_logo" alt="stripe" />
           <button className="btn toggle-btn" onClick={openSidebar}>
-            <FaBars className="text-lightOrange" />
+            <FaBars />
           </button>
         </div>
         <ul className="nav-links">
           <li>
-            <button
-              className="link-btn text-orange"
-              onMouseOver={displaySubmenu}
-            >
+            <button className="link-btn" onMouseOver={displaySubmenu}>
               Home
             </button>
           </li>
+          
           <li>
             <button className="link-btn" onMouseOver={displaySubmenu}>
-              About
+              what we do
             </button>
           </li>
           <li>
             <button className="link-btn" onMouseOver={displaySubmenu}>
-              Service
+              who we are
             </button>
           </li>
-
           <li>
             <button className="link-btn" onMouseOver={displaySubmenu}>
-              Contact
+              contact
             </button>
           </li>
         </ul>
-
-        <button className="btn signin-btn  bg-lightOrange">Sign in</button>
       </div>
     </nav>
   );

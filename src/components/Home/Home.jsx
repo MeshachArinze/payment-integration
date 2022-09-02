@@ -1,16 +1,17 @@
 // import App from "./Loading/App";
-import Page from "./Page/Page";
+
+import Homes from "./Homes/Homes";
+import Pages from "./Pages/Pages";
 import Services from "./Services/Services";
 import App from "./Slider/Alternate";
-import Slider from "./Slider/Slider";
 
 const Home = () => {
   return (
     <>
-      <Page />
-      {/* <Slider /> */}
-      <App />
+      <Homes />
       <Services />
+      <App />
+      <Pages />
     </>
   );
 };

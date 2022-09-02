@@ -1,5 +1,6 @@
 import React, { useState, useRef, useEffect } from "react";
 import { useGlobalContext } from "../../context";
+import "./Submenu.css";
 
 const Submenu = () => {
   const {
@@ -7,8 +8,7 @@ const Submenu = () => {
     page: { page, links },
     location,
   } = useGlobalContext();
-  console.log(page)
-
+  console.log(page);
   const container = useRef(null);
   const [columns, setColumns] = useState("col-2");
   useEffect(() => {
@@ -27,15 +27,17 @@ const Submenu = () => {
   }, [page, location, links]);
   return (
     <aside
-      className={`${isSubmenuOpen ? "submenu show" : "submenu"}`}
+      className={`bg-navyBlue ${isSubmenuOpen ? "submenu show" : "submenu"}`}
       ref={container}
     >
-      <section>
+      <section >
+        <h4>{page}</h4>
         <div className={`submenu-center ${columns}`}>
           {links.map((link, index) => {
-            const { url, label } = link;
+            const { url, icon, label } = link;
             return (
-              <a key={index} className="text-center" href={url}>
+              <a className="text-lightOrange" key={index} href={url}>
+                {icon}
                 {label}
               </a>
             );

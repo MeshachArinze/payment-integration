@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { FiChevronRight, FiChevronLeft } from "react-icons/fi";
-import { icons } from "../../../Data";
+import { icons } from "../../../data";
 import "./Alternate.css";
 
 function App() {
@@ -55,8 +55,7 @@ function App() {
     <section className="section bg-lightBlack">
       <div className="section-center">
         {people.map((person, personIndex) => {
-          const { id, text, title } = person;
-          console.log(id, title);
+          const { id, pics, text } = person;
 
           let position = "nextSlide";
           if (personIndex === index) {
@@ -71,10 +70,10 @@ function App() {
 
           return (
             <>
-              <article className={position} key={id}>
+              <article className={`bg-gradient-to-r from-violet-500 to-fuchsia-500 ${position}`} key={id}>
                 <div>
-                  <img src={text} alt={title} className="person-img" />
-                  <div className="text-lightOrange">{title}</div>
+                  <img src={pics} alt={text} className="person-img" />
+                  <div className="text-lightOrange">{text}</div>
                 </div>
               </article>
             </>

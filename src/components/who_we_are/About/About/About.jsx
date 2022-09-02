@@ -2,7 +2,7 @@ import React from 'react';
 import about_png from "../../undraw/product-8.jpeg";
 import second from "../../undraw/office.jpg";
 import third from "../../undraw/product-7.jpeg"
-import { useGlobalContext } from "../../context";
+import { useGlobalContext } from "../../../../context";
 import { FaGreaterThan } from "react-icons/fa";
 
 
