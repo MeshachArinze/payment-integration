@@ -52,10 +52,11 @@ function App() {
   }, [index]);
 
   return (
-    <section className="section bg-lightBlack">
+    <section className="section bg-gradient-to-r from-violet-500 to-fuchsia-500">
       <div className="section-center">
         {people.map((person, personIndex) => {
           const { id, pics, text } = person;
+          
 
           let position = "nextSlide";
           if (personIndex === index) {
@@ -70,7 +71,7 @@ function App() {
 
           return (
             <>
-              <article className={`bg-gradient-to-r from-violet-500 to-fuchsia-500 ${position}`} key={id}>
+              <article className={` ${position}`} key={id}>
                 <div>
                   <img src={pics} alt={text} className="person-img" />
                   <div className="text-lightOrange">{text}</div>

@@ -1,15 +1,14 @@
-import React from 'react';
+import React from "react";
 import Typed from "react-typed";
-import phoneImg from "../../../images/phone.svg";
+import phoneImg from "../../../../images/phone.svg";
 
-const Homes = () => {
+const Page = () => {
   return (
     <>
-  
-      <section className=" bg-lightPurple">
-        <div className=" h-auto md:flex md:flex-row p-6 space-x-8">
-          <div className=" space-y-8 text-center flex flex-col md:justify-center md:items-center mb-8">
-            <h1 className=" text-3xl max-w-[100%] text-justify text-lightOrange  mb-[2rem]">
+      <section>
+        <div className=" h-auto md:flex md:flex-row p-6 md:mx-auto md:justify-center space-x-32">
+          <div className=" space-y-8 text-center flex flex-col md:justify-center md:items-center  pb-6 bg-lightPurple">
+            <h1 className=" text-3xl max-w-[100%] text-center md:text-justify text-lightOrange  mb-[2rem]">
               Payments Method and <br />
               <Typed
                 className="text-lightOrange"
@@ -28,10 +27,10 @@ const Homes = () => {
               Start now
             </a>
           </div>
-          <div className="flex items-center justify-end">
+          <div className="flex md:items-center md:justify-end">
             <img
               src={phoneImg}
-              className="max-w-xs hidden md:block"
+              className="max-w-xs m-auto hidden md:block"
               alt="phone"
             />
           </div>
@@ -39,6 +38,6 @@ const Homes = () => {
       </section>
     </>
   );
-}
+};
 
-export default Homes
+export default Page;

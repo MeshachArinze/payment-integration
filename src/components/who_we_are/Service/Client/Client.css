@@ -1,0 +1,7 @@
+.client {
+    background: url('../../../../images/product-5.jpeg') no-repeat top center;
+    background-blend-mode: hard-light;
+    background-size: cover;
+    
+    width: 100%;
+}

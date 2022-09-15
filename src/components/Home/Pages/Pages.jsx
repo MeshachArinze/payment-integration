@@ -1,6 +1,8 @@
 import React from 'react';
 import phone from "../../../undraw/home-img.png"
 
+
+
 const Pages = () => {
   return (
     <>
@@ -21,10 +23,10 @@ const Pages = () => {
       </div>
       <div className="bg-lightWhite h-auto flex flex-col  md:flex-row md:justify-between md:items-center md:px-8 md:py-4">
         <div className="flex flex-col items-center justify-center">
-          <h1 className="text-center text-lightBlack md:text-2xl">
+          <h2 className="text-center text-lightBlack md:text-2xl">
             Why Choose Us?
-          </h1>
-          <p className="text-lightBlack px-8 text-lg">
+          </h2>
+          <p className="text-lightBlack px-8 text-lg text-justify">
             The principle of kikisha tech community is to come up with
             first-class digital marketing services that enable you to flourish
             your business and to promote your company in the market. We wholly
@@ -33,18 +35,18 @@ const Pages = () => {
             evaluating the basics of a website.
           </p>
           <a
-            className="bg-lightOrange translate-x-10  px-8  text-center  m-auto py-2 text-lg rounded-lg font-bold text-lightBlack "
+            className="bg-lightOrange  px-8 mb-8  text-center  mx-auto py-1 text-lg rounded-sm font-normal capitalize text-lightBlack "
             href="/about"
           >
             about
           </a>
         </div>
         <div>
-          <img className="max-w-xs" src={phone} alt="phone" />
+          <img className="max-w-xs hidden md:block" src={phone} alt="phone" />
         </div>
       </div>
-      <div className="bg-gradient-to-r from-blue-500 to-cyan-400 h-auto  flex  md:justify-end">
-        <div className="flex flex-col w-[500px] gap-8 mr-8">
+      <div className="bg-gradient-to-r from-blue-500 to-cyan-400 h-auto flex   md:justify-end">
+        <div className="flex flex-col m-auto w-[500px] gap-8 mr-8">
           <h2 className="text-center text-lightWhite">Let's Talk?</h2>
           <p className="p-4 text-lightWhite font-semibold text-lg">
             Fill your form and let's discuss the strategies to make your project
